@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Application</title>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.16/dist/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="css\bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- font awesome link -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/v4-shims.css">
+  <link rel="shortcut icon" href="images/icons/CH Icon.png">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<!--PEN HEADER-->
+<!-- <header class="header"> -->
+  <!-- <a class="navbar-brand" href="https://collegehousing.us/" target="_blank">
+    <img src="images/logo-2.png" width="70%" alt="College Housing">
+  </a> -->
+<!-- </header> -->
+<!--PEN CONTENT     -->
+<!-- <nav class="navbar navbar-expand-lg navbar-dark navbar-custom  row"> -->
+  <!-- <div class="row"> -->
+  <!-- <div class="col-lg-3"><a class="navbar-brand logo-image nav-link" onclick="openTab(event, 'Home-Tab')"><img src="images/logo-2.png" alt="alternative"></a></div>
+  <div class="header-text col-lg-3">Rental Applicaton</div> -->
+
+  <!-- </div> -->
+
+ <!-- end of navbar -->
+ <!-- <nav class="navbar navbar-light">
+  <a class="navbar-brand" href="#">
+    <img src="images/logo-2.png" class="d-inline-block align-top Logo-image" alt="">
+    <span class="header-span">Rental Application</span>
+  </a>
+</nav> -->
+
+<nav class="navbar navbar-expand navbar-light">
+      <a class="navbar-brand" href="https://collegehousing.us/" target="_blank"><img src="images/logo-2.png" class="d-inline-block align-top Logo-image" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto nav-text">
+          <li class="nav-item">
+            <a class="nav-link" href="https://collegehousing.us/rental-application/" target="_blank">Rental Application</a>
+          </li>
+        </ul>
+        <!-- <a class="nav-link my-2 my-md-0 nav-text-2"  href="#">
+          Contact Us
+        </a> -->
+      </div>
+    </nav>
+<div class="content">
+  <!--content inner-->
+  <div class="content__inner">
+    <div class="row">
+      <div id="title_text" class="col-sm-12 col-md-8 col-lg-6 m-auto">
+        <!--content title-->
+        <h2 class="col-12 ml-auto mr-auto mb-4 content__title-lg content__title--m-sm">Welcome to our Community! We are excited to have you join us!</h2>
+        <!--content title-->
+        <h2 class="col-12 ml-auto mr-auto mb-4 content__title-sm ">Please complete this application accuratley and we will be in touch with you shortly after with your next steps.</h2>
+
+      </div>
+    </div>
+    <div class="container overflow-hidden">
+      <!--multisteps-form-->
+      <div class="multisteps-form">
+        <!--progress bar-->
+        <div id="steps_slider" class="row">
+          <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+            <div class="multisteps-form__progress setup-panel">
+              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" disabled>Applicant Information</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" disabled >Guarantors</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Rental History" disabled >Rental History</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Employment" disabled >Employment</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" disabled >Terms and Conditions</button>
+              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" disabled >Preview Submission</button>
+              <button id="step-7-btn" class="multisteps-form__progress-btn" type="button" title="Finished Submission" onclick="submitSuccess"  style="display: none;" disabled >Finished Submission</button>
+            </div>
+          </div>
+        </div>
+        <!--form panels-->
+        <div class="row">
+          <div class="col-sm-12 col-lg-8 m-auto">
+            <form  id="myForm" name="rental-app-form" role="form" method="POST" class="multisteps-form__form" data-toggle="validator">
+            <!-- <form id="myForm" role="form" class="multisteps-form__form"> -->
+
+              <!--single form panel (1)-->
+              <div id="step-1" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="slideHorz">
+                <h4 class="multisteps-form__title">Applicant Information</h4>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <p class="col-lg-12 col-sm-12 sub-text">Your information will be used to create your profile with us. Please complete all required fields accurately. </p>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-lg-6 col-sm-12 form-group">
+                      <input id="906044" required data-unique="unique" data-table="Applicant first Name" data-error="Please enter your First Name." name="applicant-first-name" type="text" class="multisteps-form__input form-control" placeholder="First name">
+                      <label for="906044">First Name</label>
+                      <div class="help-block with-errors"></div>
+
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <input id="906045" required data-table="Applicant last name" data-error="Please enter your Last Name." name="applicant-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last name">
+                      <label for="906045">Last Name</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <select id="gender" name="applicant-gender" placeholder="gender" required data-table="Applicant gender" data-error="Please select your gender" class="multisteps-form__select form-control">
+                        <option value="" disabled selected ></option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
+                      </select>
+                      <label for="gender">Gender</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 form-group">
+                      <input id="applicant-email" required data-table="Applicant email address"  data-pattern-error="Please enter a valid email address" data-required-error="Please enter an Email address." pattern="^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel)$" name="applicant-email" type="email" class="multisteps-form__input form-control"  placeholder="Email address">
+                      <label for="applicant-email">Email Address</label>
+                      <div class="invalid-feedback">
+                        Please enter a real email address
+                      </div>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12    form-group">
+                      <input id="applicant-birthdate" required data-table="Applicant birthdate" max="2010-12-31" data-error="Please enter your Birthdate." name="applicant-birthdate" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Birthdate">
+                      <label for="applicant-birthdate">Birthdate</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 form-group">
+                      <input id="applicant-phone" required data-table="Applicant Mobile/Phone num." data-error="Please enter your Phone number." name="applicant-phone" type="tel" class="multisteps-form__input form-control" placeholder="Mobile/Phone number">
+                      <label for="applicant-phone">Mobile/Phone Number</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <input id="applicant-ssn" required data-table="Applicant SSN" data-error="Please enter your SSN." name="applicant-ssn" type="password" class="multisteps-form__input form-control" data-pattern-error="Please enter a valid SSN" maxlength="11" pattern="(?:\d{3})-(?:\d{2})-(\d{4})" placeholder="Enter SSN" onkeydown="ssnValidation()">
+                      <span toggle="#applicant-ssn" class="fas fa-eye field-icon toggle-ssn"></span>
+                      <!-- <i id="showSSN" class="fas fa-eye"></i> -->
+                      <label for="applicant-ssn">SSN</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12  hidden-field form-group">
+                    </div>
+                    <h5 class="col-lg-12 col-sm-12 card-title">Address:</h5>
+                    <div class="col-lg-5 col-sm-12   form-group">
+                      <select id="applicant-state" name="applicant-state" placeholder="State" required data-table="Applicant state" data-error="Please select a state" class="multisteps-form__select form-control state">
+                        <option value="" disabled selected ></option>
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arizona">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="District Of Columbia">District Of Columbia</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Maine">Maine</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="New York">New York</option>
+                        <option value="North Carolina">North Carolina</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Rhode Island">Rhode Island</option>
+                        <option value="South Carolina">South Carolina</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Washington">Washington</option>
+                        <option value="West Virginia">West Virginia</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Wyoming">Wyoming</option>
+                      </select>
+                      <label for="applicant-state">State</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12   form-group">
+                      <input id="applicant-city" name="applicant-city" required data-table="Applicant city" data-error="Please enter your City." class="multisteps-form__input form-control" type="text" placeholder="City"/>
+                      <label for="applicant-city">City</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-3 col-sm-12   form-group">
+                      <input id="applicant-zip" name="applicant-zip" required data-table="Applicant Zip Code" data-error="Please enter your Zip Code." class="multisteps-form__input form-control" type="number" placeholder="Zip Code"/>
+                      <label for="applicant-zip">Zip Code</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <textarea id="applicant-add-1" required data-table="Applicant Address 1" data-error="Please enter your address." name="applicant-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                      <label for="applicant-add-1">Address 1</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <textarea id="applicant-add-2" required data-table="Applicant Address 2" data-error="Please enter your address." name="applicant-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                      <label for="applicant-add-2">Address 2</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-12 col-sm-12   form-group">
+                      <select id="house-type" name="house-type"required data-table="Requested House Type" data-error="Please select a type" class="multisteps-form__select form-control">
+                        <option value="" disabled selected ></option>
+                        <option value="Group House">Group House</option>
+                        <option value="Boarding House">Boarding House</option>
+                      </select>
+                      <label for="house-type">Requested House Type</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div id="ifGpHouse" class="form-row mt-4" style="display:none; width: 100%;">
+
+                    </div>
+                    <div id="ifBHouse" class="form-row mt-4" style="display:none; width: 100%;">
+
+                    </div>
+                    <!-- <div class="col-lg-6 col-sm-12   form-group">
+                      <select id="boarding-house-name" name="req-property" required data-table="Requested House Name" data-error="Please select a name" class="multisteps-form__select form-control">
+                        <option value="" disabled selected ></option>
+                        <option value="Theta Chi">Theta Chi</option>
+                      </select>
+                      <label for="boarding-house-name">Requested House Name</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <select id="room-type" name="room-type" required data-table="Room Type" data-error="Please select a room type" class="multisteps-form__select form-control">
+                        <option value="" disabled selected ></option>
+                        <option value="Single">Single</option>
+                        <option value="Suite Double">Suite Double</option>
+                        <option value="Double">Double</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Basement Double">Basement Double</option>
+                      </select>
+                      <label for="room-type">Room Type</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 form-group">
+                      <select id="room-num" name="room-num" required data-table="Requested Room Number" data-error="Please select a type" class="multisteps-form__select form-control">
+                        <option value="" disabled selected ></option>
+                        <option value="202">202</option>
+                        <option value="203">203</option>
+                        <option value="205">205</option>
+                        <option value="304">304</option>
+                        <option value="305">305</option>
+                        <option value="308">308</option>
+                        <option value="309">309</option>
+                        <option value="310">310</option>
+                        <option value="102">102</option>
+                        <option value="201C">201C</option>
+                        <option value="201A">201A</option>
+                        <option value="204C">204C</option>
+                        <option value="206">206</option>
+                        <option value="208">208</option>
+                        <option value="307">307</option>
+                        <option value="306">306</option>
+                        <option value="303">303</option>
+                        <option value="301">301</option>
+                        <option value="311">311</option>
+                        <option value="302">302</option>
+                        <option value="201A">201A</option>
+                        <option value="303">303</option>
+                        <option value="101">101</option>
+                        <option value="207">207</option>
+                        <option value="Bsmnt1">Bsmnt1</option>
+                        <option value="Bsmnt2">Bsmnt2</option>
+
+                      </select>
+                      <label for="room-num">Requested Room Number</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <h5 class="col-lg-12 col-sm-12 card-title">Requested Property for Rent:</h5>
+                    <div class="col-lg-12 col-sm-12 form-group">
+                      <select id="906046" data-none-selected-text="Requested Property for Rent" required data-table="Requested property" data-error="Please enter the requested property for rent." name="req-property" class="multisteps-form__input form-control my-select" multiple>
+                        <option id="empty_selected" value="" selected> </option>
+                        <option value="4603 Knox Road">4603 Knox Road</option>
+                        <option value="4609 Knox Road">4609 Knox Road</option>
+                        <option value="4611 Knox Road">4611 Knox Road</option>
+                        <option value="4613 Knox Road">4613 Knox Road</option>
+                        <option value="4613 1/2 Knox Road">4613 1/2 Knox Road</option>
+                        <option value="4708 Norwich Road">4708 Norwich Road</option>
+                        <option value="4711 Norwich Road">4711 Norwich Road</option>
+                        <option value="7307 Hopkins Ave">7307 Hopkins Ave</option>
+                        <option value="7309 Hopkins Ave">7309 Hopkins Ave</option>
+                        <option value="7309 Hopkins Ave Apt">7309 Hopkins Ave Apt</option>
+                        <option value="7310 Hokins Ave">7310 Hokins Ave</option>
+                        <option value="7504 Hokins Ave">7504 Hokins Ave</option>
+                        <option value="4620 College Ave">4620 College Ave</option>
+                        <option value="4610 Calvert Road">4610 Calvert Road</option>
+                        <option value="4504 Guilford Road A">4504 Guilford Road A</option>
+                        <option value="4504 Guilford Road B">4504 Guilford Road B</option>
+                        <option value="4504 Guilford Road C">4504 Guilford Road C</option>
+                        <option value="468111 / 51 Ave">8111 / 51 Ave</option>
+                        <option value="6805 Baltimore Ave">6805 Baltimore Ave</option>
+                        <option value="8817 Patricia Ct">8817 Patricia Ct</option>
+                        <option value="7211 Dartmouth Ave">4611 Knox Road</option>
+                      </select>
+                      <label for="906046">Requested Property for Rent</label>
+                      <div class="help-block with-errors"></div>
+                    </div> -->
+                    <!-- <div class="col-lg-6 col-sm-12 form-group">
+                      <input id="applicant-country" disabled required data-table="Applicant country" data-error="Please enter your Country." name="applicant-country" type="text" class="multisteps-form__input form-control country" value="United States" placeholder="Country" id="ApplicantCountry"></input>
+                      <label class="active" for="applicant-country">Country</label>
+                      <div class="help-block with-errors"></div>
+                    </div> -->
+
+<!--
+                    <h5 class="col-lg-12 col-sm-12 card-title">Group Members:</h5>
+                    <div class="col-lg-12 col-sm-12 form-group">
+                      <input id="group-lead" required data-table="Group lead name" data-error="Please enter your group Lead name." name="group-lead" type="text" class="multisteps-form__input form-control" placeholder="Group Lead Name">
+                      <label for="group-lead">Group lead name</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <input id="member-1" required data-table="Group member name (1)" data-error="Please enter the group member name" name="group-member-1" type="text" class="form-control textarea-form" placeholder="1. Group Member Name">
+                      <label for="member-1">Group member name (1)</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <input id="member-2" required data-table="Group member name (2)" data-error="Please enter the group member name" name="group-member-2" type="text" class="form-control textarea-form" placeholder="2. Group Member Name">
+                      <label for="member-2">Group member name (2)</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <input id="member-3" required data-table="Group member name (3)" data-error="Please enter the group member name" name="group-member-3" type="text" class="form-control textarea-form" placeholder="3. Group Member Name">
+                      <label for="member-3">Group member name (3)</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <input id="member-4" required data-table="Group member name (4)" data-error="Please enter the group member name" name="group-member-4" type="text" class="form-control textarea-form" placeholder="4. Group Member Name">
+                      <label for="member-4">Group member name (4)</label>
+                      <div class="help-block with-errors"></div>
+                    </div> -->
+                    <!-- <p class="col-lg-12 col-sm-12" style="font-size = 1rem;">Estimated amount you are prepared to pay as a group (without utilities)</p>
+                    <div class="col-lg-12 col-sm-12 form-group">
+                      <input id="prepared2pay" required data-table="Estimated amount you are prepared to pay as a group (without utilities)" data-error="Please fill out this field." name="estimated-payment" type="number" class="multisteps-form__input form-control" placeholder="Estimated amount you are prepared to pay as a group (without utilities)">
+                      <label style="font-size: 0.89rem;" for="prepared2pay">Estimated amount to pay in dollars</label>
+                      <div class="help-block with-errors"></div>
+                    </div> -->
+                    <div id="car_fields" class="col-lg-12 col-sm-12 form-group">
+                      <select id="car-select" placeholder="Do you own a Car?" required data-table="Do you own a Car?" data-error="Please select an answer" name="own-a-car?" type="text" class="multisteps-form__input form-control">
+                        <option selected disabled hidden value=""></option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="planning">Planning to own a car</option>
+                      </select>
+                      <label for="car-select">Do you own a car?</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div id="ifYesCar" class="form-row" style="display:none;">
+
+                    </div>
+                    <div class="col-lg-6 col-sm-12 form-group">
+                      <input id="school" required data-table="School" data-error="Please fill out this field." name="applicant-school" type="text" class="multisteps-form__input form-control" placeholder="School">
+                      <label for="school">School</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <input id="major" required data-table="Major" data-error="Please fill out this field." name="applicant-major" type="text" class="multisteps-form__input form-control" placeholder="Major">
+                      <label for="major">Major</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 form-group">
+                      <input id="school-year" required data-table="Year" data-error="Please fill out this field." name="applicant-school-year" type="text" class="multisteps-form__input form-control" placeholder="Year">
+                      <label for="school-year">Year</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <input id="gpa" required data-table="GPA" data-error="Please fill out this field." name="applicant-gpa" type="text" class="multisteps-form__input form-control" placeholder="GPA">
+                      <label for="gpa">GPA</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-12 col-sm-12 form-group chapter-div">
+                      <div class="chapter-content">
+                        <select id="loc-affiliations" required data-table="Local Affiliations" data-error="Please fill out this field." name="local-affiliations" type="text" class="multisteps-form__input form-control" placeholder="Local affiliations - faternity, sorority, etc.">
+                          <option value="" disabled selected hidden></option>
+                          <option value="Alpha Delta Phi (IFC)">Alpha Delta Phi (IFC)</option>
+                          <option value="Alpha Epsilon Pi (IFC)">Alpha Epsilon Pi (IFC)</option>
+                          <option value="Alpha Phi Alpha Fraternity, Inc. (NPHC)">Alpha Phi Alpha Fraternity, Inc. (NPHC)</option>
+                          <option value="Alpha Sigma Phi (IFC)">Alpha Sigma Phi (IFC)</option>
+                          <option value="Alpha Tau Omega (IFC)">Alpha Tau Omega (IFC)</option>
+                          <option value="Beta Theta Pi (IFC)">Beta Theta Pi (IFC)</option>
+                          <option value="Chi Phi (IFC)">Chi Phi (IFC)</option>
+                          <option value="Delta Sigma Phi (IFC)">Delta Sigma Phi (IFC)</option>
+                          <option value="Delta Upsilon (IFC)">Delta Upsilon (IFC)</option>
+                          <option value="Iota Nu Delta Fraternity, Inc. (MGC)">Iota Nu Delta Fraternity, Inc. (MGC)</option>
+                          <option value="Kappa Alpha Order (IFC)">Kappa Alpha Order (IFC)</option>
+                          <option value="Kappa Alpha Psi Fraternity, Inc. (NPHC)">Kappa Alpha Psi Fraternity, Inc. (NPHC)</option>
+                          <option value="Lambda Chi Alpha (IFC)">Lambda Chi Alpha (IFC)</option>
+                          <option value="Lambda Upsilon Lambda Fraternity, Inc. (MGC)">Lambda Upsilon Lambda Fraternity, Inc. (MGC)</option>
+                          <option value="Phi Delta Sigma Fraternity, Inc. (MGC)">Phi Delta Sigma Fraternity, Inc. (MGC)</option>
+                          <option value="Phi Delta Theta (IFC)">Phi Delta Theta (IFC)</option>
+                          <option value="Phi Kappa Psi (IFC)">Phi Kappa Psi (IFC)</option>
+                          <option value="Phi Kappa Tau (IFC)">Phi Kappa Tau (IFC)</option>
+                          <option value="Phi Sigma Kappa (IFC)">Phi Sigma Kappa (IFC)</option>
+                          <option value="Pi Kappa Alpha (IFC)">Pi Kappa Alpha (IFC)</option>
+                          <option value="Sigma Alpha Epsilon (IFC)">Sigma Alpha Epsilon (IFC)</option>
+                          <option value="Sigma Alpha Mu (IFC)">Sigma Alpha Mu (IFC)</option>
+                          <option value="Sigma Chi (IFC)">Sigma Chi (IFC)</option>
+                          <option value="Sigma Nu (IFC)">Sigma Nu (IFC)</option>
+                          <option value="Sigma Phi Epsilon (IFC)">Sigma Phi Epsilon (IFC)</option>
+                          <option value="Tau Epsilon Phi (IFC)">Tau Epsilon Phi (IFC)</option>
+                          <option value="Theta Chi (IFC)">Theta Chi (IFC)</option>
+                          <option value="Zeta Beta Tau (IFC)">Zeta Beta Tau (IFC)</option>
+                          <option value="Zeta Psi (IFC)">Zeta Psi (IFC)</option>
+                          <option value="Alpha Chi Omega (PHA)">Alpha Chi Omega (PHA)</option>
+                          <option value="Alpha Delta Pi (PHA)">Alpha Delta Pi (PHA)</option>
+                          <option value="Alpha Epsilon Phi (PHA)">Alpha Epsilon Phi (PHA)</option>
+                          <option value="Alpha Kappa Alpha Sorority, Inc. (NPHC)">Alpha Kappa Alpha Sorority, Inc. (NPHC)</option>
+                          <option value="Alpha Omicron Pi (PHA)">Alpha Omicron Pi (PHA)</option>
+                          <option value="Alpha Phi (PHA)">Alpha Phi (PHA)</option>
+                          <option value="Alpha Xi Delta (PHA)">Alpha Xi Delta (PHA)</option>
+                          <option value="Delta Delta Delta (PHA)">Delta Delta Delta (PHA)</option>
+                          <option value="Delta Gamma (PHA)">Delta Gamma (PHA)</option>
+                          <option value="Delta Phi Epsilon (PHA)">Delta Phi Epsilon (PHA)</option>
+                          <option value="Delta Sigma Theta Sorority, Inc. (NPHC)">Delta Sigma Theta Sorority, Inc. (NPHC)</option>
+                          <option value="Gamma Phi Beta (PHA)">Gamma Phi Beta (PHA)</option>
+                          <option value="Hermandad de Sigma Iota Alpha, Inc. (MGC)">Hermandad de Sigma Iota Alpha, Inc. (MGC)</option>
+                          <option value="Kappa Alpha Theta (PHA)">Kappa Alpha Theta (PHA)</option>
+                          <option value="Kappa Delta (PHA)">Kappa Delta (PHA)</option>
+                          <option value="Kappa Lambda Xi Multicultural Sorority, Inc. (MGC)">Kappa Lambda Xi Multicultural Sorority, Inc. (MGC)</option>
+                          <option value="Kappa Phi Lambda Sorority, Inc. (MGC)">Kappa Phi Lambda Sorority, Inc. (MGC)</option>
+                          <option value="Lambda Theta Alpha Latin Sorority, Inc. (MGC)">Lambda Theta Alpha Latin Sorority, Inc. (MGC)</option>
+                          <option value="Phi Sigma Sigma (PHA)">Phi Sigma Sigma (PHA)</option>
+                          <option value="Sigma Delta Tau (PHA)">Sigma Delta Tau (PHA)</option>
+                          <option value="Sigma Kappa (PHA)">Sigma Kappa (PHA)</option>
+                          <option value="Sigma Psi Zeta Sorority, Inc. (MGC)">Sigma Psi Zeta Sorority, Inc. (MGC)</option>
+                          <option value="Zeta Tau Alpha (PHA)">Zeta Tau Alpha (PHA)</option>
+                          <option value="alpha Kappa Delta Phi Sorority, Inc. (MGC)">alpha Kappa Delta Phi Sorority, Inc. (MGC)</option>
+                          <option value="N/A">N/A</option>
+                        </select>
+                        <label for="loc-affiliations">Chapters</label>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- <select id="loc-affiliations" required data-table="Local Affiliations" data-error="Please fill out this field." name="local-affiliations" type="text" class="multisteps-form__input form-control" placeholder="Local affiliations - faternity, sorority, etc.">
+                        <option value="" disabled selected hidden></option>
+                      </select>
+                      <label for="loc-affiliations">Chapters</label>
+                      <div class="help-block with-errors"></div> -->
+
+                    </div>
+                    <div class="col-lg-12 col-sm-12 form-group">
+                      <select id="payment-schedule" required name="payment-schedule" data-table="Preferred payment schedule" data-error="Please select an answer" placeholder="Preferred Payment Schedule" type="text" class="multisteps-form__input form-control">
+                        <option value="" disabled selected hidden></option>
+                        <option value="Quarterly">Quarterly</option>
+                        <option value="Biannual">Biannual</option>
+                        <option value="Yearly">Yearly</option>
+                        <option value="Monthly">Monthly</option>
+                        <option value="Bimonthly">Bimonthly</option>
+                      </select>
+                      <label for="payment-schedule">Preferred payment schedule</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-12 col-sm-12 form-group">
+                      <select id="who-pays" required name="who-pay-rent" placeholder="Who is paying the rent?" data-table="Who is paying the rent?" data-error="Please select an answer" type="text" class="multisteps-form__input form-control">
+                        <option value="" hidden disabled selected ></option>
+                        <option value="Self">Self</option>
+                        <option value="Parents">Parents</option>
+                        <option value="Scholarships">Scholarships</option>
+                        <option value="Others">Others</option>
+                      </select>
+                      <label for="who-pays">Who is paying the rent?</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-12 col-sm-12">
+                      <p class="radio-button-txt">It is so important that you register to vote in Collage Park (it will make a difference for YOU and future Terps). Pass this on to everyone you know - this CAN really make a difference for YOU living in College Park. Are you willing to register to vote?</p>
+                      <div class="radio-btn-row form-group">
+                        <label class="radio-inline">
+                          <input required data-error="Please choose an answer." data-table="Are you willing to register to vote?" placeholder="Are you willing to register to vote?" type="radio" name="willing-to-register-to-vote" value="Yes">Yes
+                        </label>
+                        <label class="radio-inline">
+                          <input data-table="Are you willing to register to vote?" placeholder="Are you willing to register to vote?" type="radio" name="willing-to-register-to-vote" value="No">No
+                        </label>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="button-row d-flex mt-4">
+                    <button id="next-1" class="btn btn-primary ml-auto js-btn-next nextBtn" onclick="reqProp();" type="button" title="Next" >Next</button>
+                    <!-- <button class="btn btn-success ml-auto" type="submit" title="Send">Send</button> -->
+
+                  </div>
+                </div>
+              </div>
+              <!--single form panel (2)-->
+              <div id="step-2" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
+                <h4 class="multisteps-form__title">Guarantors</h4>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <p class="col-lg-12 col-sm-12 sub-text">Your guarantors are financially responsible for any outstanding payments under the terms of your lease in case you were unable to pay. All guarantors listed will be contacted automatically for confirmation. Please list your guarantors and provide valid email addresses for them.</p>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col">
+                      <p class="radio-button-txt">Both parents are required to sign the guaranty. Is there any problems with that?</p>
+                      <div class="radio-btn-row form-group">
+                        <label class="radio-inline">
+                          <input id="yesCheck" data-table="Do you have a problem with both parents signing?" placeholder="Do you have a problem with both parents signing?" value="Yes" required data-error="Please choose an answer." type="radio" name="problem-with-both-parents-signing">Yes
+                        </label>
+                        <label class="radio-inline">
+                          <input id="noCheck" data-table="Do you have a problem with both parents signing?" placeholder="Do you have a problem with both parents signing?" value="No" type="radio" name="problem-with-both-parents-signing">No
+                        </label>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="ifYesCheck" class="form-row mt-4" style="display:none;">
+
+                  </div>
+
+                  <div class="form-row mt-4">
+                    <div class="col">
+                      <h5 class="card-title">Parent 1 Information</h5>
+                      <div class="form-row mt-4">
+                        <div class="col-lg-6 col-sm-12 form-group">
+                          <input id="parent-1-fname" required data-table="Parent 1 First name" data-error="Please enter first name." name="parent-1-first-name" type="text" class="multisteps-form__input form-control" placeholder="First name">
+                          <label for="parent-1-fname">First name</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12   form-group">
+                          <input id="parent-1-lname" required data-table="Parent 1 Last name" data-error="Please enter last name." name="parent-1-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last name">
+                          <label for="parent-1-lname">Last name</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+
+                        <div class="col-lg-5 col-sm-12   form-group">
+                          <select id="parent-1-state" data-table="Parent 1 state" required data-error="Please choose state." placeholder="State" name="parent-1-state" class="multisteps-form__select form-control state">
+                            <option value="" disabled selected ></option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arizona">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="District Of Columbia">District Of Columbia</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                          </select>
+                          <label for="parent-1-state">State</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12   form-group">
+                          <input id="parent-1-city" required data-table="Parent 1 City" data-error="Please enter City." name="parent-1-city" type="text" class="multisteps-form__input form-control" placeholder="City">
+                          <label for="parent-1-city">City</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-3 col-sm-12   form-group">
+                          <input id="parent-1-zip" required data-table="Parent 1 Zip Code." data-error="Please enter Zip Code" name="parent-1-zip" type="number" class="multisteps-form__input form-control" placeholder="Zip Code">
+                          <label for="parent-1-zip">Zip Code</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12   form-group">
+                          <textarea required data-table="Parent 1 Address 1" data-error="Please enter your address." name="parent-1-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                          <label for="parent-1-add-1">Address 1</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12   form-group">
+                          <textarea id="parent-1-add-2" required data-table="Parent 1 Address 2" data-error="Please enter your address." name="parent-1-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                          <label for="parent-1-add-2">Address 2</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 form-group">
+                          <input id="parent-1-phone" required data-table="Parent 1 phone num." data-error="Please enter Phone number." name="parent-1-phone-num" type="tel" class="multisteps-form__input form-control" placeholder="Mobile/Phone Number">
+                          <label for="parent-1-phone">Mobile/Phone Number</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12   form-group">
+                          <input id="parent-1-email" required data-table="Parent 1 Email Address" name="parent-1-email" type="email"  data-pattern-error="Please enter a valid email address" data-required-error="Please enter an Email address." pattern="^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel)$" class="multisteps-form__input form-control" placeholder="Email Address">
+                          <label for="parent-1-email">Email Address</label>
+                          <div class="help-block with-errors"></div>
+                          <div class="invalid-feedback">
+                            Please enter a real email address
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 form-group">
+                          <input id="parent-1-place-employment" required data-table="Parent 1 place of employment" data-error="Please enter Place of employment." name="parent-1-place-of-employment" type="text" class="multisteps-form__input form-control" placeholder="Place of Employment">
+                          <label for="parent-1-place-employment">Place of employment</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12   form-group">
+                          <input id="parent-1-position" required data-table="Parent 1 position" data-error="Please enter Position." name="parent-1-position" type="text" class="multisteps-form__input form-control" placeholder="Position">
+                          <label for="parent-1-position">Position</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col">
+                      <h5 class="card-title">Parent 2 Information</h5>
+                      <div class="form-row mt-4">
+                        <div class="col-lg-6 col-sm-12 form-group">
+                          <input id="parent-2-fname" required data-table="Parent 2 first name" data-error="Please enter First name." name="parent-2-first-name" type="text" class="multisteps-form__input form-control" placeholder="First Name">
+                          <label for="parent-2-fname">First name</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12   form-group">
+                          <input id="parent-2-lname" required data-table="Parent 2 last name" data-error="Please enter Last name" name="parent-2-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last Name">
+                          <label for="parent-2-lname">Last name</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-5 col-sm-12   form-group">
+                          <select id="parent-2-state" required data-table="Parent 2 state" data-error="Please choose a State." placeholder="State" name="parent-2-state" class="multisteps-form__select form-control state">
+                            <option value="" disabled selected ></option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arizona">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="District Of Columbia">District Of Columbia</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                          </select>
+                          <label for="parent-2-state">State</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      <div class="col-lg-4 col-sm-12   form-group">
+                          <input id="parent-2-city" required data-table="Parent 2 city" data-error="Please enter city." name="parent-2-city" type="text" class="multisteps-form__input form-control" placeholder="City">
+                          <label for="parent-2-city">City</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-3 col-sm-12   form-group">
+                          <input id="parent-2-zip" required data-table="Parent 2 Zip Code" data-error="Please enter Zip Code" name="parent-2-zip" type="number" class="multisteps-form__input form-control" placeholder="Zip Code">
+                          <label for="parent-2-zip">Zip Code</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      <div class="col-lg-6 col-sm-12   form-group">
+                          <textarea id="parent-2-add-1" required data-table="Parent 2 address 1" data-error="Please enter your address." name="parent-2-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                          <label for="parent-2-add-1">Address 1</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12   form-group">
+                          <textarea id="parent-2-add-2" required data-table="Parent 2 address 2" data-error="Please enter your address." name="parent-2-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                          <label for="parent-2-add-2">Address 2</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      <div class="col-lg-6 col-sm-12 form-group">
+                          <input id="parent-2-phone" required data-table="Parent 2 mobile/phone num." data-error="Please enter Phone number." name="parent-2-phone-num" type="tel" class="multisteps-form__input form-control" placeholder="Mobile/Phone Number">
+                          <label for="parent-2-phone">Mobile/Phone Number</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12   form-group">
+                          <input id="parent-2-email" required data-table="Parent 2 email"  name="parent-2-email" type="email" data-pattern-error="Please enter a valid email address" data-required-error="Please enter an Email address." pattern="^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel)$" class="multisteps-form__input form-control" placeholder="Email Address">
+                          <label for="parent-2-email">Email Address</label>
+                          <div class="help-block with-errors"></div>
+                          <div class="invalid-feedback">
+                            Please enter a real email address
+                          </div>
+
+                        </div>
+                        <div class="col-lg-6 col-sm-12 form-group">
+                          <input id="parent-2-place-employment" required data-table="Parent 2 place of employment" data-error="Please enter Place of employment." name="parent-2-place-of-employment" type="text" class="multisteps-form__input form-control" placeholder="Place of Employment">
+                          <label for="parent-2-place-employment">Place of employment</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12   form-group">
+                          <input id="parent-2-position" required data-table="Parent 2 position" data-error="Please enter Position." name="parent-2-position" type="text" class="multisteps-form__input form-control" placeholder="Position">
+                          <label for="parent-2-position">Position</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next nextBtn" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel (3)-->
+              <div id="step-3" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div id="readroot">
+                      <div class="readrootContainer">
+                        <h4 class="multisteps-form__title">Rental History</h4>
+                        <div class="form-row mt-4">
+                          <p class="col-lg-12 col-sm-12 sub-text">Your rental history is used to determine your eligibility for renting with us. A good rental history increases your chances of approval. </p>
+                        </div>
+                        <div class="form-row mt-4">
+                          <div class="col">
+                            <h5 class="card-title">Rental Address:</h5>
+                            <div class="form-row mt-4">
+                              <div class="col-lg-5 col-sm-12   form-group">
+                                <select id="rental-state" required data-table="Rental state" data-error="Please choose an answer." placeholder="State" name="rental-history-state-a" class="multisteps-form__select form-control state nameF">
+                                  <option value="" disabled selected ></option>
+                                  <option value="Alabama">Alabama</option>
+                                  <option value="Alaska">Alaska</option>
+                                  <option value="Arizona">Arizona</option>
+                                  <option value="Arizona">Arkansas</option>
+                                  <option value="California">California</option>
+                                  <option value="Colorado">Colorado</option>
+                                  <option value="Connecticut">Connecticut</option>
+                                  <option value="Delaware">Delaware</option>
+                                  <option value="District Of Columbia">District Of Columbia</option>
+                                  <option value="Florida">Florida</option>
+                                  <option value="Georgia">Georgia</option>
+                                  <option value="Hawaii">Hawaii</option>
+                                  <option value="Idaho">Idaho</option>
+                                  <option value="Illinois">Illinois</option>
+                                  <option value="Indiana">Indiana</option>
+                                  <option value="Iowa">Iowa</option>
+                                  <option value="Kansas">Kansas</option>
+                                  <option value="Kentucky">Kentucky</option>
+                                  <option value="Louisiana">Louisiana</option>
+                                  <option value="Maine">Maine</option>
+                                  <option value="Maryland">Maryland</option>
+                                  <option value="Massachusetts">Massachusetts</option>
+                                  <option value="Michigan">Michigan</option>
+                                  <option value="Minnesota">Minnesota</option>
+                                  <option value="Mississippi">Mississippi</option>
+                                  <option value="Missouri">Missouri</option>
+                                  <option value="Montana">Montana</option>
+                                  <option value="Nebraska">Nebraska</option>
+                                  <option value="Nevada">Nevada</option>
+                                  <option value="New Hampshire">New Hampshire</option>
+                                  <option value="New Jersey">New Jersey</option>
+                                  <option value="New Mexico">New Mexico</option>
+                                  <option value="New York">New York</option>
+                                  <option value="North Carolina">North Carolina</option>
+                                  <option value="North Dakota">North Dakota</option>
+                                  <option value="Ohio">Ohio</option>
+                                  <option value="Oklahoma">Oklahoma</option>
+                                  <option value="Oregon">Oregon</option>
+                                  <option value="Pennsylvania">Pennsylvania</option>
+                                  <option value="Rhode Island">Rhode Island</option>
+                                  <option value="South Carolina">South Carolina</option>
+                                  <option value="South Dakota">South Dakota</option>
+                                  <option value="Tennessee">Tennessee</option>
+                                  <option value="Texas">Texas</option>
+                                  <option value="Utah">Utah</option>
+                                  <option value="Vermont">Vermont</option>
+                                  <option value="Virginia">Virginia</option>
+                                  <option value="Washington">Washington</option>
+                                  <option value="West Virginia">West Virginia</option>
+                                  <option value="Wisconsin">Wisconsin</option>
+                                  <option value="Wyoming">Wyoming</option>
+                                </select>
+                                <label for="rental-state">State</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-4 col-sm-12   form-group">
+                                <input id="rental-city" required data-table="Rental city" data-error="Please enter City"  placeholder="City" name="rental-history-city-a" type="text" class="multisteps-form__input form-control nameF">
+                                <label for="rental-city">City</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-3 col-sm-12   form-group">
+                                <input id="rental-zip" required data-table="Rental Zip Code" data-error="Please enter Zip Code" placeholder="Zip Code" name="rental-history-zip-a" type="number" class="multisteps-form__input form-control nameF">
+                                <label for="rental-zip">Zip Code</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <textarea id="rental-add-1" required data-table="Rental address 1" data-error="Please enter your address." name="rental-add-1-a" type="text" class="form-control textarea-form nameF" placeholder="Address 1"></textarea>
+                                <label for="rental-add-1">Address 1</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <textarea id="rental-add-2" required data-table="Rental address 2" data-error="Please enter your address." name="rental-add-2-a" type="text" class="form-control textarea-form nameF" placeholder="Address 2"></textarea>
+                                <label for="rental-add-2">Address 2</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12 form-group">
+                                <input id="rental-date" required data-table="Rental date" data-error="Please enter Rental dates." name="rental-history-date-a" type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" class="multisteps-form__input form-control nameF" placeholder="Rental Dates">
+                                <label for="rental-date">Rental Date</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <input id="monthly-rent" required data-table="Rental monthly rent" data-error="Please enter Monthly Rent."  placeholder="Monthly Rent" name="rental-history-monthly-rent-a" type="text" class="multisteps-form__input form-control nameF" placeholder="Monthly Rent">
+                                <label for="monthly-rent">Monthly rent</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col form-group">
+                                <input id="reason-for-leaving" required data-table="Reason for leaving" data-error="Please enter Reason for leaving." name="reason-for-leaving-a" type="text" class="multisteps-form__input form-control nameF" placeholder="Reason For leaving">
+                                <label for="reason-for-leaving">Reason for leaving</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row mt-4">
+                          <div class="col">
+                            <h5 class="card-title">Landlord Information:</h5>
+                            <div class="form-row mt-4">
+                              <div class="col-lg-6 col-sm-12 form-group">
+                                <input id="landlord-fname" required data-table="Landlord first name" data-error="Please enter First Name." name="landlord-first-name-a" type="text" class="multisteps-form__input form-control nameF" placeholder="First Name">
+                                <label for="landlord-fname">First Name</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <input id="landlord-lname" required data-table="Landlord last name" data-error="Please enter Last Name." name="landlord-last-name-a" type="text" class="multisteps-form__input form-control nameF" placeholder="Last Name">
+                                <label for="landlord-lname">Last name</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12 form-group">
+                                <input id="landlord-phone-number" required data-table="Landlord Mobile/Phone num." data-error="Please enter Phone number." name="landlord-phone-a" type="tel" class="multisteps-form__input form-control nameF" placeholder="Mobile/Phone Number">
+                                <label for="landlord-phone-number">Mobile/Phone number</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <input id="landlord-email" required  data-table="Landlord email address" data-emaildup="false"   name="landlord-email-a" type="email" data-pattern-error="Please enter a valid email address" data-required-error="Please enter an Email address." pattern="^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel)$" class="multisteps-form__input form-control nameF" placeholder="Email address">
+                                <label for="landlord-email">Email</label>
+                                <div class="help-block with-errors"></div>
+                                <div class="invalid-feedback">
+                                  Please enter a real email address
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row mt-4">
+                        </div>
+                        <!-- <a class="rem-rental-history" id="remBtn" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">x Remove Rental History Entry</a> -->
+                      </div>
+                    </div>
+                    </div>
+                    <div id="writeroot"></div>
+                    <div class="form-row mt-4">
+                      <div class="col">
+                        <a class="add-rental-history"  id="add_entry">+ Add Rental History Entry</a>
+                      </div>
+                    </div>
+                  <!-- <div id="writeroot"></div> -->
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="state-total" data-table="undefined" type="text" name="rental-history-state" class="multisteps-form__select form-control hidden">
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="city-total"  data-table="undefined" name="rental-history-city" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="zip-total"  data-table="undefined" name="rental-history-zip" type="text" class="multisteps-form__input form-control hidden" >
+                    <label for="landlord-email">city total</label>
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="add-1-total" data-table="undefined" name="rental-add-1" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="add-2-total" data-table="undefined" name="rental-add-2" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="date-total" data-table="undefined" name="rental-history-date" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="rent-total" data-table="undefined" name="rental-history-monthly-rent" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="reason-total" data-table="undefined" name="reason-for-leaving" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="landlord-fname-total" data-table="undefined" name="landlord-first-name" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="landlord-lname-total" data-table="undefined" name="landlord-last-name" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="landlord-phone-total" data-table="undefined" name="landlord-phone" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="landlord-email-total" data-table="undefined" name="landlord-email" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="row">
+                    <div class="button-row d-flex mt-4 col-12">
+                      <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                      <button class="btn btn-primary ml-auto js-btn-next nextBtn" onclick="rentalCallFunction()" type="button" title="Next">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel (4)-->
+              <div id="step-4" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div id="readroot2">
+                      <div class="readrootContainer">
+                        <h4 class="multisteps-form__title">Employment</h4>
+                        <div class="form-row mt-4">
+                          <p class="col-lg-12 col-sm-12 sub-text">Your employment information may increase your chances of approval if you don't have enough strong rental history.  </p>
+                        </div>
+                        <div class="form-row mt-4">
+                          <div class="col">
+                            <p class="radio-button-txt">Do you have any emploment history or currently have a job?</p>
+                            <div class="radio-btn-row form-group">
+                              <label class="radio-inline">
+                                <input id="yesEmployCheck" data-table="Do you have any emploment history or currently have a job?" placeholder="Do you have any emploment history or currently have a job?" value="Yes" required data-error="Please choose an answer." type="radio" name="have-emploment-history">Yes
+                              </label>
+                              <label class="radio-inline">
+                                <input id="noEmployCheck" data-table="Do you have any emploment history or currently have a job?" placeholder="Do you have any emploment history or currently have a job?" value="No" type="radio" name="have-emploment-history">No
+                              </label>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row mt-4">
+                          <div class="col">
+                            <h5 class="card-title">Employer Information:</h5>
+                            <div class="form-row mt-4">
+                              <div class="col-lg-12 sol-sm-12 form-group">
+                                <input id="employer-name" required data-table="Employer name" data-error="Please enter Name." name="employer-name-a" type="text" class="multisteps-form__input form-control" placeholder="Employer Name">
+                                <label for="employer-name">Employer name</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12 form-group">
+                                <input id="employer-phone" required data-table="Employer Mobile/Phone num." data-error="Please enter Phone number." name="employer-phone-a" type="tel" class="multisteps-form__input form-control" placeholder="Mobile/Phone number">
+                                <label for="employer-phone">Mobile/Phone number</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <input id="employer-email" name="employer-email-a" required data-table="Employer email"  type="email" data-pattern-error="Please enter a valid email address" data-required-error="Please enter an Email address." pattern="^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel)$" class="multisteps-form__input form-control" placeholder="Email Address(optional)">
+                                <label for="employer-email">Email</label>
+                                <div class="help-block with-errors"></div>
+                                <div class="invalid-feedback">
+                                  Please enter a real email address
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row mt-4">
+                          <div class="col">
+                            <h5 class="card-title">Employer Address (optional):</h5>
+                            <div class="form-row mt-4">
+                              <div class="col-lg-5 col-sm-12   form-group">
+                                <select id="employer-state" data-table="Employer state" data-error="Please choose a state" name="employer-state-a" placeholder="State" class="multisteps-form__select form-control state">
+                                  <option value="" disabled selected ></option>
+                                  <option value="Alabama">Alabama</option>
+                                  <option value="Alaska">Alaska</option>
+                                  <option value="Arizona">Arizona</option>
+                                  <option value="Arizona">Arkansas</option>
+                                  <option value="California">California</option>
+                                  <option value="Colorado">Colorado</option>
+                                  <option value="Connecticut">Connecticut</option>
+                                  <option value="Delaware">Delaware</option>
+                                  <option value="District Of Columbia">District Of Columbia</option>
+                                  <option value="Florida">Florida</option>
+                                  <option value="Georgia">Georgia</option>
+                                  <option value="Hawaii">Hawaii</option>
+                                  <option value="Idaho">Idaho</option>
+                                  <option value="Illinois">Illinois</option>
+                                  <option value="Indiana">Indiana</option>
+                                  <option value="Iowa">Iowa</option>
+                                  <option value="Kansas">Kansas</option>
+                                  <option value="Kentucky">Kentucky</option>
+                                  <option value="Louisiana">Louisiana</option>
+                                  <option value="Maine">Maine</option>
+                                  <option value="Maryland">Maryland</option>
+                                  <option value="Massachusetts">Massachusetts</option>
+                                  <option value="Michigan">Michigan</option>
+                                  <option value="Minnesota">Minnesota</option>
+                                  <option value="Mississippi">Mississippi</option>
+                                  <option value="Missouri">Missouri</option>
+                                  <option value="Montana">Montana</option>
+                                  <option value="Nebraska">Nebraska</option>
+                                  <option value="Nevada">Nevada</option>
+                                  <option value="New Hampshire">New Hampshire</option>
+                                  <option value="New Jersey">New Jersey</option>
+                                  <option value="New Mexico">New Mexico</option>
+                                  <option value="New York">New York</option>
+                                  <option value="North Carolina">North Carolina</option>
+                                  <option value="North Dakota">North Dakota</option>
+                                  <option value="Ohio">Ohio</option>
+                                  <option value="Oklahoma">Oklahoma</option>
+                                  <option value="Oregon">Oregon</option>
+                                  <option value="Pennsylvania">Pennsylvania</option>
+                                  <option value="Rhode Island">Rhode Island</option>
+                                  <option value="South Carolina">South Carolina</option>
+                                  <option value="South Dakota">South Dakota</option>
+                                  <option value="Tennessee">Tennessee</option>
+                                  <option value="Texas">Texas</option>
+                                  <option value="Utah">Utah</option>
+                                  <option value="Vermont">Vermont</option>
+                                  <option value="Virginia">Virginia</option>
+                                  <option value="Washington">Washington</option>
+                                  <option value="West Virginia">West Virginia</option>
+                                  <option value="Wisconsin">Wisconsin</option>
+                                  <option value="Wyoming">Wyoming</option>
+                                </select>
+                                <label for="employer-state">State</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-4 col-sm-12   form-group">
+                                <input id="employer-city" data-table="Employer city" data-error="Please enter a city" name="employer-city-a"type="text" class="multisteps-form__input form-control" placeholder="City">
+                                <label for="employer-city">City</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-3 col-sm-12   form-group">
+                                <input id="employer-zip" data-table="Employer Zip Code" data-error="Please enter Zip Code." name="employer-zip-a" type="number" class="multisteps-form__input form-control" placeholder="Zip Code">
+                                <label for="employer-zip">Zip Code</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <textarea id="employer-add-1"  data-table="Employer address 1" data-error="Please enter your address." name="employer-add-1-a" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                                <label for="employer-add-1">Address 1</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <textarea id="employer-add-2"  data-table="Employer address 2" data-error="Please enter your address." name="employer-add-2-a" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                                <label for="employer-add-2">Address 2</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12 form-group">
+                                <input id="your-position" required data-table="Your position" data-error="Please enter your Position." name="position-held-a" type="text" class="multisteps-form__input form-control" placeholder="Your Position">
+                                <label for="your-position">Your Position</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <input id="gross-salary" required data-table="Monthly gross salary" data-error="Please enter your Monthly gross salary." name="monthly-gross-salary-a" type="text" class="multisteps-form__input form-control" placeholder="Monthly Gross Salary">
+                                <label for="gross-salary">Monthly gross salary</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-row mt-4">
+                          <div class="col">
+                            <h5 class="card-title">Employment Dates:</h5>
+                            <!-- <div class="form-row mt-1 ml-1">
+                              <div class="form-holder w-100 form-group">
+                                <p>I agree</p>
+                                <input data-table="I currently work in this role"  placeholder="I currently work in this role"  type="checkbox" id="currentRole" name="currentRole" value="Yes" style="color: black;">
+                                <label class="terms" for="currentRole">I currently work in this role</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div> -->
+                            <div class="form-row mt-4 date-from-to-row">
+                              <div class="form-holder w-100 ml-2 form-group">
+                                <!-- <p>I agree</p> -->
+                                <input data-table="undefined"  placeholder="I currently work in this role"  type="checkbox" id="currentRole" name="currentRole" value="Yes" style="color: black;">
+                                <label class="terms" for="currentRole">I currently work in this role</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
+                                <input  id="employment-date-from" onchange="dateToFunction('employment-date-from', 'employment-date-to');"  required data-table="Started employment at:"  max data-error="Please enter a date." name="employment-date-from-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Started Employment at:">
+                                <label for="employment-date-from">Started</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-2 col-sm-2 mt-4 mt-sm-0 arrow-container" style="width:10%;">
+                                <!-- <i class="zmdi zmdi-calendar-alt"></i> -->
+                                <i class="fas fa-arrow-right"></i>
+                              </div>
+                              <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
+                                <input id="employment-date-to" onclick="dateToFunction('employment-date-from', 'employment-date-to');" data-min-error="End date must be after start date" required data-table="Ended employment at:" min  data-required-error="Please enter a date" name="employment-date-to-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Ended Employment at:">
+                                <label id="employment-date-to-label" for="employment-date-to">Ended</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row mt-4">
+                          <div class="col">
+                            <h5 class="card-title">Supervisor Name:</h5>
+                            <div class="form-row mt-4">
+                              <div class="col-lg-6 col-sm-12 form-group">
+                                <input id="supervisor-fname" required data-table="Supervisor first name" data-error="Please enter First name." name="supervisor-first-name-a" type="text" class="multisteps-form__input form-control" placeholder="First name">
+                                <label for="supervisor-fname">First name</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <input id="supervisor-lname" required data-table="Supervisor last name" data-error="Please enter Last name." name="supervisor-last-name-a" type="text" class="multisteps-form__input form-control" placeholder="Last name">
+                                <label for="supervisor-lname">Last name</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-12 col-sm-12 form-group">
+                                <input id="supervisor-title" required data-table="Supervisor title" data-error="Please enter Supervisor title." name="supervisor-title-a" type="text" class="multisteps-form__input form-control" placeholder="Supervisor Title">
+                                <label for="supervisor-title">Supervisor title</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                            </div>
+                            <div class="form-row mt-4">
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <a class="rem-rental-history"  onclick="this.parentNode.parentNode.removeChild(this.parentNode);">x Remove Employment Entry</a> -->
+                      </div>
+                    </div>
+                    <!-- end readroot -->
+                    <div id="writeroot2"></div>
+                    <div class="form-row mt-4">
+                      <div class="col">
+                        <a class="add-rental-history"  id="add_entry_2">+ Add Employment Entry</a>
+                      </div>
+                    </div>
+                    <!-- <a class="add-rental-history"  onclick="addEntry2();">+ Add Employment Entry</a> -->
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="employer-name-total" data-table="undefined" name="employer-name" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="employer-phone-total" data-table="undefined" name="employer-phone" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="employer-email-total" data-table="undefined" name="employer-email" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="employer-state-total" data-table="undefined" type="text" name="employer-state" class="multisteps-form__select form-control hidden">
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="employer-city-total"  data-table="undefined" name="employer-city" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="employer-zip-total"  data-table="undefined" name="employer-zip" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="employer-add-1-total" data-table="undefined" name="employer-add-1" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="employer-add-2-total" data-table="undefined" name="employer-add-2" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="position-held-total" data-table="undefined" name="position-held" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="salary-total" data-table="undefined" name="monthly-gross-salary" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="employment-from-total" data-table="undefined" name="employment-date-from" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="employment-to-total" data-table="undefined" name="employment-date-to" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="supervisor-fname-total" data-table="undefined" name="supervisor-first-name" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="supervisor-lname-total" data-table="undefined" name="supervisor-last-name" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12   form-group hidden-area">
+                    <input id="supervisor-title-total" data-table="undefined" name="supervisor-title" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+
+
+                  <div class="row">
+                    <div class="button-row d-flex mt-4 col-12">
+                      <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                      <button class="btn btn-primary ml-auto js-btn-next nextBtn" type="button" onclick="employerCallFunction();" title="Next">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel (5)-->
+              <div id="step-5" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
+                <h4 class="multisteps-form__title">Terms and Conditions</h4>
+                <div class="multisteps-form__content">
+                  <div class="col-lg-6 col-sm-12 form-group hidden-area">
+                    <input id="uniqueID" required data-table="undefined" data-error="Please enter your First Name." name="unique ID" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="form-row mt-4">
+                    <p class="col-lg-12 col-sm-12 sub-text">Please carefully read and agree to the terms and conditions to submit your application.</p>
+                  </div>
+                  <div class="form-row mt-4">
+                    <p>I understand that this is a routine application to establish credit, character, employment, and rental history. I also understand that this is NOT an agreement to rent and that all applications must be approved. I authorize verification of references given. I declare that the statements above are true and correct, and I agree that the landlord may terminate my agreement entered into in reliance on any misstatement made above.</p>
+                  </div>
+                  <div class="form-row mt-1">
+                    <div class="form-holder w-100 form-group">
+                      <!-- <p>I agree</p> -->
+                      <input required data-table="Do you agree to our terms and conditions?" data-error="You must agree to the Terms and Conditions." placeholder="Do you agree to our terms and conditions?" name="terms-and-conditions-agreement" type="checkbox" id="agreement" name="agree" value="I Agree" style="color: black;">
+                      <label class="terms" for="agreement">I agree to the terms and conditions</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <h6>Agreed By:</h6>
+                    <div class="form-holder w-100 form-group">
+                      <input id="your-full-name" required data-table="Your full name" data-error="Please enter your Full Name." name="applicant-full-name" type="text" class="multisteps-form__input form-control" placeholder="Type Your Full Name">
+                      <label for="your-full-name">Type Your Full Name</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button id="previewBtn" class="btn btn-primary ml-auto js-btn-next nextBtn" type="button" title="Next" >Preview Submission</button>
+
+                    <!-- <button class="btn btn-primary js-btn-preview js-btn-next nextBtn ml-auto" id="previewBtn" type="button" title="Preview" >Preview Submission</button> -->
+                    <!-- <button type="button"  class="button-1  btn btn-primary btn-lg ml-auto" data-toggle="modal" data-target="#myModal">Join TERPX</button> </a> -->
+
+                    <!-- <button class="btn btn-success ml-auto" type="submit" title="Send">Send</button> -->
+                  </div>
+                </div>
+              </div>
+              <!--single form panel (6)-->
+              <div id="step-6" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
+                <h4 class="multisteps-form__title">Preview Submission</h4>
+                <div class="multisteps-form__content">
+                  <div class="form-group modal-text hidden-area">
+                    <!-- <label for="name" class="col-form-label modal-text">Name:</label> -->
+                    <input type="text" id="submitDate" name="submitDate" value="" class="hidden">
+                  </div>
+                  <div class="form-row mt-4">
+                    <p class="col-lg-12 col-sm-12 sub-text">Please review all information provided and make sure they are correct. Typos in names or emails may delay or disqualify your application. </p>
+                  </div>
+                  <table id="prevTable" class="table table-bordered">
+
+                  </table>
+                  <div class="row">
+                    <div class="button-row d-flex mt-4 col-12">
+                      <button class="btn btn-primary" id="editBtn" type="button" title="Prev">Edit</button>
+                      <button class="btn btn-success ml-auto" type="submit" title="Send">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- step 7 -->
+              <div id="step-6" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
+                <div class="multisteps-form__content">
+                  <div class="success pt-1">
+                    <h3 class="text-success">Thank You</h3>
+                    <h5 class="text-success">Your Application has been submitted successfully</h5>
+                  </div>
+
+                  <div class="failed pt-1">
+                    <h7 class="text-danger">Submission Failed plaese check invalid fields</h7>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div id="footer" class="footer">
+  <div class="footer-container">
+    <div class="footer-text">
+      <span style="padding-right:1.5rem;">© 2020 </span>
+      <span> College Housing LLC. All Rights Reserved.</span>
+    </div>
+    <div class="footer-icons">
+      <span class="follow-us" style="padding-right:1.5rem; font-size:12px;"> FOLLOW US</span>
+      <span class="social-icon" style="padding-right:1.5rem; "><a href="https://www.facebook.com/collegehousingllc/" target="_blank"><i class="fa fa-facebook fa-1x" style="color:#fff;"></i></a></span>
+      <span class="social-icon" style="padding-right:1.5rem; "><a href="https://www.linkedin.com/company/college-housing-llc/about/" target="_blank"><i class="fa fa-linkedin fa-1x" style="color:#fff;"></i></a></span>
+      <span class="social-icon" style="padding-right:1.5rem; "><a href="https://www.instagram.com/college_housing/?hl=en" target="_blank"><i class="fa fa-instagram fa-1x" style="color:#fff;"></i></a></span>
+    </div>
+  </div>
+</div> -->
+<!-- partial -->
+  <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script> -->
+  <!-- <script src="js/validator.min.js"></script> -->
+  <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.16/dist/js/bootstrap-select.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/cjs/popper.min.js"></script> -->
+  <script src="js\floatingLabels.js"></script>
+  <script  src="js/script.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js\preview.js"></script>
+  <script src="js\multipleNames.js"></script>
+  <script src="js/email_validation.js"></script>
+
+  <!-- <script src="js\btnManager.js"></script> -->
+
+
+
+
+</body>
+</html>
