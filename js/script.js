@@ -34,8 +34,8 @@ function submitFailed() {
 }
 
 function csubmitForm() {
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwc8qcQgEElCRsMYXw5LX049lFU11d6H7jyb-6YeYZHZlExyEtI/exec'
   // const scriptURL = 'https://script.google.com/macros/s/AKfycbz7Pd9hLTvHmCFwWI31U6_jKtLlJsN7pfKB_H8sTYzZDB1Wk1Y/exec'
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbz7Pd9hLTvHmCFwWI31U6_jKtLlJsN7pfKB_H8sTYzZDB1Wk1Y/exec'
   const form = document.forms['rental-app-form']
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     // .then(response => console.log('Success!', response))
@@ -727,7 +727,7 @@ var boarding_house_fields = `
   <div class="col-lg-6 col-sm-12 form-group boarding-house-field">
     <select id="boarding-house-name" name="req-property" required data-table="Requested House Name" data-error="Please select a name" class="multisteps-form__select form-control">
       <option value="" disabled selected ></option>
-      <option value="Theta Chi">Theta Chi</option>
+      <option value="7401 Princeton Ave">7401 Princeton Ave</option>
     </select>
     <label for="boarding-house-name">Requested House Name</label>
     <div class="help-block with-errors"></div>
