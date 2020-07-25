@@ -66,7 +66,7 @@
         <!--content title-->
         <h2 class="col-12 ml-auto mr-auto mb-4 content__title-lg content__title--m-sm">Welcome to our Community! We are excited to have you join us!</h2>
         <!--content title-->
-        <h2 class="col-12 ml-auto mr-auto mb-4 content__title-sm ">Please complete this application accuratley and we will be in touch with you shortly after with your next steps.</h2>
+        <h2 class="col-12 ml-auto mr-auto mb-4 content__title-sm ">Please complete this application accurately and we will be in touch with you shortly after with your next steps.</h2>
 
       </div>
     </div>
@@ -150,7 +150,22 @@
                     <div class="col-lg-6 col-sm-12  hidden-field form-group">
                     </div>
                     <h5 class="col-lg-12 col-sm-12 card-title">Address:</h5>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <textarea id="applicant-add-1" required data-table="Applicant Address 1" data-error="Please enter your address." name="applicant-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                      <label for="applicant-add-1">Address 1</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <textarea id="applicant-add-2" required data-table="Applicant Address 2" data-error="Please enter your address." name="applicant-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                      <label for="applicant-add-2">Address 2</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
                     <div class="col-lg-5 col-sm-12   form-group">
+                      <input id="applicant-city" name="applicant-city" required data-table="Applicant city" data-error="Please enter your City." class="multisteps-form__input form-control" type="text" placeholder="City"/>
+                      <label for="applicant-city">City</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12   form-group">
                       <select id="applicant-state" name="applicant-state" placeholder="State" required data-table="Applicant state" data-error="Please select a state" class="multisteps-form__select form-control state">
                         <option value="" disabled selected ></option>
                         <option value="Alabama">Alabama</option>
@@ -208,24 +223,9 @@
                       <label for="applicant-state">State</label>
                       <div class="help-block with-errors"></div>
                     </div>
-                    <div class="col-lg-4 col-sm-12   form-group">
-                      <input id="applicant-city" name="applicant-city" required data-table="Applicant city" data-error="Please enter your City." class="multisteps-form__input form-control" type="text" placeholder="City"/>
-                      <label for="applicant-city">City</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
                     <div class="col-lg-3 col-sm-12   form-group">
                       <input id="applicant-zip" name="applicant-zip" required data-table="Applicant Zip Code" data-error="Please enter your Zip Code." class="multisteps-form__input form-control" type="number" placeholder="Zip Code"/>
                       <label for="applicant-zip">Zip Code</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12   form-group">
-                      <textarea id="applicant-add-1" required data-table="Applicant Address 1" data-error="Please enter your address." name="applicant-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
-                      <label for="applicant-add-1">Address 1</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12   form-group">
-                      <textarea id="applicant-add-2" required data-table="Applicant Address 2" data-error="Please enter your address." name="applicant-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
-                      <label for="applicant-add-2">Address 2</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-12 col-sm-12   form-group">
@@ -234,7 +234,7 @@
                         <option value="Group House">Group House</option>
                         <option value="Boarding House">Boarding House</option>
                       </select>
-                      <label for="house-type">Requested House Type</label>
+                      <label for="house-type">Requested Housing Type</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div id="ifGpHouse" class="form-row" style="display:none; width: 100%;">
@@ -243,128 +243,6 @@
                     <div id="ifBHouse" class="form-row" style="display:none; width: 100%;">
 
                     </div>
-                    <!-- <div class="col-lg-6 col-sm-12   form-group">
-                      <select id="boarding-house-name" name="req-property" required data-table="Requested House Name" data-error="Please select a name" class="multisteps-form__select form-control">
-                        <option value="" disabled selected ></option>
-                        <option value="Theta Chi">Theta Chi</option>
-                      </select>
-                      <label for="boarding-house-name">Requested House Name</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12   form-group">
-                      <select id="room-type" name="room-type" required data-table="Room Type" data-error="Please select a room type" class="multisteps-form__select form-control">
-                        <option value="" disabled selected ></option>
-                        <option value="Single">Single</option>
-                        <option value="Suite Double">Suite Double</option>
-                        <option value="Double">Double</option>
-                        <option value="Apartment">Apartment</option>
-                        <option value="Basement Double">Basement Double</option>
-                      </select>
-                      <label for="room-type">Room Type</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12 form-group">
-                      <select id="room-num" name="room-num" required data-table="Requested Room Number" data-error="Please select a type" class="multisteps-form__select form-control">
-                        <option value="" disabled selected ></option>
-                        <option value="202">202</option>
-                        <option value="203">203</option>
-                        <option value="205">205</option>
-                        <option value="304">304</option>
-                        <option value="305">305</option>
-                        <option value="308">308</option>
-                        <option value="309">309</option>
-                        <option value="310">310</option>
-                        <option value="102">102</option>
-                        <option value="201C">201C</option>
-                        <option value="201A">201A</option>
-                        <option value="204C">204C</option>
-                        <option value="206">206</option>
-                        <option value="208">208</option>
-                        <option value="307">307</option>
-                        <option value="306">306</option>
-                        <option value="303">303</option>
-                        <option value="301">301</option>
-                        <option value="311">311</option>
-                        <option value="302">302</option>
-                        <option value="201A">201A</option>
-                        <option value="303">303</option>
-                        <option value="101">101</option>
-                        <option value="207">207</option>
-                        <option value="Bsmnt1">Bsmnt1</option>
-                        <option value="Bsmnt2">Bsmnt2</option>
-
-                      </select>
-                      <label for="room-num">Requested Room Number</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <h5 class="col-lg-12 col-sm-12 card-title">Requested Property for Rent:</h5>
-                    <div class="col-lg-12 col-sm-12 form-group">
-                      <select id="906046" data-none-selected-text="Requested Property for Rent" required data-table="Requested property" data-error="Please enter the requested property for rent." name="req-property" class="multisteps-form__input form-control my-select" multiple>
-                        <option id="empty_selected" value="" selected> </option>
-                        <option value="4603 Knox Road">4603 Knox Road</option>
-                        <option value="4609 Knox Road">4609 Knox Road</option>
-                        <option value="4611 Knox Road">4611 Knox Road</option>
-                        <option value="4613 Knox Road">4613 Knox Road</option>
-                        <option value="4613 1/2 Knox Road">4613 1/2 Knox Road</option>
-                        <option value="4708 Norwich Road">4708 Norwich Road</option>
-                        <option value="4711 Norwich Road">4711 Norwich Road</option>
-                        <option value="7307 Hopkins Ave">7307 Hopkins Ave</option>
-                        <option value="7309 Hopkins Ave">7309 Hopkins Ave</option>
-                        <option value="7309 Hopkins Ave Apt">7309 Hopkins Ave Apt</option>
-                        <option value="7310 Hokins Ave">7310 Hokins Ave</option>
-                        <option value="7504 Hokins Ave">7504 Hokins Ave</option>
-                        <option value="4620 College Ave">4620 College Ave</option>
-                        <option value="4610 Calvert Road">4610 Calvert Road</option>
-                        <option value="4504 Guilford Road A">4504 Guilford Road A</option>
-                        <option value="4504 Guilford Road B">4504 Guilford Road B</option>
-                        <option value="4504 Guilford Road C">4504 Guilford Road C</option>
-                        <option value="468111 / 51 Ave">8111 / 51 Ave</option>
-                        <option value="6805 Baltimore Ave">6805 Baltimore Ave</option>
-                        <option value="8817 Patricia Ct">8817 Patricia Ct</option>
-                        <option value="7211 Dartmouth Ave">4611 Knox Road</option>
-                      </select>
-                      <label for="906046">Requested Property for Rent</label>
-                      <div class="help-block with-errors"></div>
-                    </div> -->
-                    <!-- <div class="col-lg-6 col-sm-12 form-group">
-                      <input id="applicant-country" disabled required data-table="Applicant country" data-error="Please enter your Country." name="applicant-country" type="text" class="multisteps-form__input form-control country" value="United States" placeholder="Country" id="ApplicantCountry"></input>
-                      <label class="active" for="applicant-country">Country</label>
-                      <div class="help-block with-errors"></div>
-                    </div> -->
-
-<!--
-                    <h5 class="col-lg-12 col-sm-12 card-title">Group Members:</h5>
-                    <div class="col-lg-12 col-sm-12 form-group">
-                      <input id="group-lead" required data-table="Group lead name" data-error="Please enter your group Lead name." name="group-lead" type="text" class="multisteps-form__input form-control" placeholder="Group Lead Name">
-                      <label for="group-lead">Group lead name</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12   form-group">
-                      <input id="member-1" required data-table="Group member name (1)" data-error="Please enter the group member name" name="group-member-1" type="text" class="form-control textarea-form" placeholder="1. Group Member Name">
-                      <label for="member-1">Group member name (1)</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12   form-group">
-                      <input id="member-2" required data-table="Group member name (2)" data-error="Please enter the group member name" name="group-member-2" type="text" class="form-control textarea-form" placeholder="2. Group Member Name">
-                      <label for="member-2">Group member name (2)</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12   form-group">
-                      <input id="member-3" required data-table="Group member name (3)" data-error="Please enter the group member name" name="group-member-3" type="text" class="form-control textarea-form" placeholder="3. Group Member Name">
-                      <label for="member-3">Group member name (3)</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12   form-group">
-                      <input id="member-4" required data-table="Group member name (4)" data-error="Please enter the group member name" name="group-member-4" type="text" class="form-control textarea-form" placeholder="4. Group Member Name">
-                      <label for="member-4">Group member name (4)</label>
-                      <div class="help-block with-errors"></div>
-                    </div> -->
-                    <!-- <p class="col-lg-12 col-sm-12" style="font-size = 1rem;">Estimated amount you are prepared to pay as a group (without utilities)</p>
-                    <div class="col-lg-12 col-sm-12 form-group">
-                      <input id="prepared2pay" required data-table="Estimated amount you are prepared to pay as a group (without utilities)" data-error="Please fill out this field." name="estimated-payment" type="number" class="multisteps-form__input form-control" placeholder="Estimated amount you are prepared to pay as a group (without utilities)">
-                      <label style="font-size: 0.89rem;" for="prepared2pay">Estimated amount to pay in dollars</label>
-                      <div class="help-block with-errors"></div>
-                    </div> -->
                     <div id="car_fields" class="col-lg-12 col-sm-12 form-group">
                       <select id="car-select" placeholder="Do you own a Car?" required data-table="Do you own a Car?" data-error="Please select an answer" name="own-a-car?" type="text" class="multisteps-form__input form-control">
                         <option selected disabled hidden value=""></option>
@@ -550,8 +428,22 @@
                           <label for="parent-1-lname">Last name</label>
                           <div class="help-block with-errors"></div>
                         </div>
-
+                        <div class="col-lg-6 col-sm-12   form-group">
+                          <textarea required data-table="Parent 1 Address 1" data-error="Please enter your address." name="parent-1-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                          <label for="parent-1-add-1">Address 1</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12   form-group">
+                          <textarea id="parent-1-add-2" required data-table="Parent 1 Address 2" data-error="Please enter your address." name="parent-1-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                          <label for="parent-1-add-2">Address 2</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
                         <div class="col-lg-5 col-sm-12   form-group">
+                          <input id="parent-1-city" required data-table="Parent 1 City" data-error="Please enter City." name="parent-1-city" type="text" class="multisteps-form__input form-control" placeholder="City">
+                          <label for="parent-1-city">City</label>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12   form-group">
                           <select id="parent-1-state" data-table="Parent 1 state" required data-error="Please choose state." placeholder="State" name="parent-1-state" class="multisteps-form__select form-control state">
                             <option value="" disabled selected ></option>
                             <option value="Alabama">Alabama</option>
@@ -609,24 +501,9 @@
                           <label for="parent-1-state">State</label>
                           <div class="help-block with-errors"></div>
                         </div>
-                        <div class="col-lg-4 col-sm-12   form-group">
-                          <input id="parent-1-city" required data-table="Parent 1 City" data-error="Please enter City." name="parent-1-city" type="text" class="multisteps-form__input form-control" placeholder="City">
-                          <label for="parent-1-city">City</label>
-                          <div class="help-block with-errors"></div>
-                        </div>
                         <div class="col-lg-3 col-sm-12   form-group">
                           <input id="parent-1-zip" required data-table="Parent 1 Zip Code." data-error="Please enter Zip Code" name="parent-1-zip" type="number" class="multisteps-form__input form-control" placeholder="Zip Code">
                           <label for="parent-1-zip">Zip Code</label>
-                          <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="col-lg-6 col-sm-12   form-group">
-                          <textarea required data-table="Parent 1 Address 1" data-error="Please enter your address." name="parent-1-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
-                          <label for="parent-1-add-1">Address 1</label>
-                          <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="col-lg-6 col-sm-12   form-group">
-                          <textarea id="parent-1-add-2" required data-table="Parent 1 Address 2" data-error="Please enter your address." name="parent-1-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
-                          <label for="parent-1-add-2">Address 2</label>
                           <div class="help-block with-errors"></div>
                         </div>
                         <div class="col-lg-6 col-sm-12 form-group">
@@ -669,7 +546,22 @@
                           <label for="parent-2-lname">Last name</label>
                           <div class="help-block with-errors"></div>
                         </div>
-                        <div class="col-lg-5 col-sm-12   form-group">
+                        <div class="col-lg-6 col-sm-12   form-group">
+                            <textarea id="parent-2-add-1" required data-table="Parent 2 address 1" data-error="Please enter your address." name="parent-2-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                            <label for="parent-2-add-1">Address 1</label>
+                            <div class="help-block with-errors"></div>
+                          </div>
+                          <div class="col-lg-6 col-sm-12   form-group">
+                            <textarea id="parent-2-add-2" required data-table="Parent 2 address 2" data-error="Please enter your address." name="parent-2-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                            <label for="parent-2-add-2">Address 2</label>
+                            <div class="help-block with-errors"></div>
+                          </div>
+                          <div class="col-lg-5 col-sm-12   form-group">
+                              <input id="parent-2-city" required data-table="Parent 2 city" data-error="Please enter city." name="parent-2-city" type="text" class="multisteps-form__input form-control" placeholder="City">
+                              <label for="parent-2-city">City</label>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                        <div class="col-lg-4 col-sm-12   form-group">
                           <select id="parent-2-state" required data-table="Parent 2 state" data-error="Please choose a State." placeholder="State" name="parent-2-state" class="multisteps-form__select form-control state">
                             <option value="" disabled selected ></option>
                             <option value="Alabama">Alabama</option>
@@ -727,24 +619,9 @@
                           <label for="parent-2-state">State</label>
                           <div class="help-block with-errors"></div>
                         </div>
-                      <div class="col-lg-4 col-sm-12   form-group">
-                          <input id="parent-2-city" required data-table="Parent 2 city" data-error="Please enter city." name="parent-2-city" type="text" class="multisteps-form__input form-control" placeholder="City">
-                          <label for="parent-2-city">City</label>
-                          <div class="help-block with-errors"></div>
-                        </div>
                         <div class="col-lg-3 col-sm-12   form-group">
                           <input id="parent-2-zip" required data-table="Parent 2 Zip Code" data-error="Please enter Zip Code" name="parent-2-zip" type="number" class="multisteps-form__input form-control" placeholder="Zip Code">
                           <label for="parent-2-zip">Zip Code</label>
-                          <div class="help-block with-errors"></div>
-                        </div>
-                      <div class="col-lg-6 col-sm-12   form-group">
-                          <textarea id="parent-2-add-1" required data-table="Parent 2 address 1" data-error="Please enter your address." name="parent-2-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
-                          <label for="parent-2-add-1">Address 1</label>
-                          <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="col-lg-6 col-sm-12   form-group">
-                          <textarea id="parent-2-add-2" required data-table="Parent 2 address 2" data-error="Please enter your address." name="parent-2-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
-                          <label for="parent-2-add-2">Address 2</label>
                           <div class="help-block with-errors"></div>
                         </div>
                       <div class="col-lg-6 col-sm-12 form-group">
@@ -794,7 +671,22 @@
                           <div class="col">
                             <h5 class="card-title">Rental Address:</h5>
                             <div class="form-row mt-4">
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <textarea id="rental-add-1" required data-table="Rental address 1" data-error="Please enter your address." name="rental-add-1-a" type="text" class="form-control textarea-form nameF" placeholder="Address 1"></textarea>
+                                <label for="rental-add-1">Address 1</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <textarea id="rental-add-2" required data-table="Rental address 2" data-error="Please enter your address." name="rental-add-2-a" type="text" class="form-control textarea-form nameF" placeholder="Address 2"></textarea>
+                                <label for="rental-add-2">Address 2</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
                               <div class="col-lg-5 col-sm-12   form-group">
+                                <input id="rental-city" required data-table="Rental city" data-error="Please enter City"  placeholder="City" name="rental-history-city-a" type="text" class="multisteps-form__input form-control nameF">
+                                <label for="rental-city">City</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-4 col-sm-12   form-group">
                                 <select id="rental-state" required data-table="Rental state" data-error="Please choose an answer." placeholder="State" name="rental-history-state-a" class="multisteps-form__select form-control state nameF">
                                   <option value="" disabled selected ></option>
                                   <option value="Alabama">Alabama</option>
@@ -852,24 +744,9 @@
                                 <label for="rental-state">State</label>
                                 <div class="help-block with-errors"></div>
                               </div>
-                              <div class="col-lg-4 col-sm-12   form-group">
-                                <input id="rental-city" required data-table="Rental city" data-error="Please enter City"  placeholder="City" name="rental-history-city-a" type="text" class="multisteps-form__input form-control nameF">
-                                <label for="rental-city">City</label>
-                                <div class="help-block with-errors"></div>
-                              </div>
                               <div class="col-lg-3 col-sm-12   form-group">
                                 <input id="rental-zip" required data-table="Rental Zip Code" data-error="Please enter Zip Code" placeholder="Zip Code" name="rental-history-zip-a" type="number" class="multisteps-form__input form-control nameF">
                                 <label for="rental-zip">Zip Code</label>
-                                <div class="help-block with-errors"></div>
-                              </div>
-                              <div class="col-lg-6 col-sm-12   form-group">
-                                <textarea id="rental-add-1" required data-table="Rental address 1" data-error="Please enter your address." name="rental-add-1-a" type="text" class="form-control textarea-form nameF" placeholder="Address 1"></textarea>
-                                <label for="rental-add-1">Address 1</label>
-                                <div class="help-block with-errors"></div>
-                              </div>
-                              <div class="col-lg-6 col-sm-12   form-group">
-                                <textarea id="rental-add-2" required data-table="Rental address 2" data-error="Please enter your address." name="rental-add-2-a" type="text" class="form-control textarea-form nameF" placeholder="Address 2"></textarea>
-                                <label for="rental-add-2">Address 2</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 form-group">
@@ -1031,7 +908,22 @@
                           <div class="col">
                             <h5 class="card-title">Employer Address (optional):</h5>
                             <div class="form-row mt-4">
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <textarea id="employer-add-1"  data-table="Employer address 1" data-error="Please enter your address." name="employer-add-1-a" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                                <label for="employer-add-1">Address 1</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-6 col-sm-12   form-group">
+                                <textarea id="employer-add-2"  data-table="Employer address 2" data-error="Please enter your address." name="employer-add-2-a" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                                <label for="employer-add-2">Address 2</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
                               <div class="col-lg-5 col-sm-12   form-group">
+                                <input id="employer-city" data-table="Employer city" data-error="Please enter a city" name="employer-city-a"type="text" class="multisteps-form__input form-control" placeholder="City">
+                                <label for="employer-city">City</label>
+                                <div class="help-block with-errors"></div>
+                              </div>
+                              <div class="col-lg-4 col-sm-12   form-group">
                                 <select id="employer-state" data-table="Employer state" data-error="Please choose a state" name="employer-state-a" placeholder="State" class="multisteps-form__select form-control state">
                                   <option value="" disabled selected ></option>
                                   <option value="Alabama">Alabama</option>
@@ -1089,24 +981,9 @@
                                 <label for="employer-state">State</label>
                                 <div class="help-block with-errors"></div>
                               </div>
-                              <div class="col-lg-4 col-sm-12   form-group">
-                                <input id="employer-city" data-table="Employer city" data-error="Please enter a city" name="employer-city-a"type="text" class="multisteps-form__input form-control" placeholder="City">
-                                <label for="employer-city">City</label>
-                                <div class="help-block with-errors"></div>
-                              </div>
                               <div class="col-lg-3 col-sm-12   form-group">
                                 <input id="employer-zip" data-table="Employer Zip Code" data-error="Please enter Zip Code." name="employer-zip-a" type="number" class="multisteps-form__input form-control" placeholder="Zip Code">
                                 <label for="employer-zip">Zip Code</label>
-                                <div class="help-block with-errors"></div>
-                              </div>
-                              <div class="col-lg-6 col-sm-12   form-group">
-                                <textarea id="employer-add-1"  data-table="Employer address 1" data-error="Please enter your address." name="employer-add-1-a" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
-                                <label for="employer-add-1">Address 1</label>
-                                <div class="help-block with-errors"></div>
-                              </div>
-                              <div class="col-lg-6 col-sm-12   form-group">
-                                <textarea id="employer-add-2"  data-table="Employer address 2" data-error="Please enter your address." name="employer-add-2-a" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
-                                <label for="employer-add-2">Address 2</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 form-group">

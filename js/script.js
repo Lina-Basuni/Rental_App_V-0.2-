@@ -436,25 +436,31 @@ function requireParents() {
   })
 }
 
+var yes = 0 ;
+
 $('#yesCheck').click(function() {
+  if (yes<1) {
+    yes= yes+1;
     $('#ifYesCheck').append(ifYesAppend);
     $('#ifYesCheck').slideDown();
     $("#note-reason").attr('required',true);
     $("form").validator('update');
 
     // $("#step-2").find($("#note-reason")).each(function(){
-    //   var elm = $(this);
-    //   elm.attr('required', true);
-    // })
-    noteReasonChange();
-    // $("#note-reason").attr("required",true);
-    unrequireParents();
+      //   var elm = $(this);
+      //   elm.attr('required', true);
+      // })
+      noteReasonChange();
+      // $("#note-reason").attr("required",true);
+      unrequireParents();
+  }
 
 
 
 });
 
 $('#noCheck').click(function() {
+  yes=0;
     $('#ifYesCheck').slideUp();
     $('.ifyes-div').detach();
     $("#note-reason").attr("required",false);
@@ -714,9 +720,9 @@ var gp_house_fields = `
     <label for="member-4">Group member name (4)</label>
     <div class="help-block with-errors"></div>
   </div>
-  <p class="gp-house-field col-lg-12 col-sm-12" style="font-size = 1rem;">Estimated amount you are prepared to pay as a group (without utilities)</p>
+  <p class="gp-house-field col-lg-12 col-sm-12" style="font-size = 1rem;">Estimated amount you are prepared to pay per person(without utilities)</p>
   <div class="gp-house-field col-lg-12 col-sm-12 form-group">
-    <input id="prepared2pay" required data-table="Estimated amount you are prepared to pay as a group (without utilities)" data-error="Please fill out this field." name="estimated-payment" type="number" class="multisteps-form__input form-control" placeholder="Estimated amount you are prepared to pay as a group (without utilities)">
+    <input id="prepared2pay" required data-table="Estimated amount you are prepared to pay per person (without utilities)" data-error="Please fill out this field." name="estimated-payment" type="number" class="multisteps-form__input form-control" placeholder="Estimated amount you are prepared to pay as a group (without utilities)">
     <label style="font-size: 0.89rem;" for="prepared2pay">Estimated amount to pay in dollars</label>
     <div class="help-block with-errors"></div>
   </div>
@@ -779,9 +785,9 @@ var boarding_house_fields = `
           <div class="help-block with-errors"></div>
         </div>
       </div>
-      <p class="boarding-house-field col-lg-12 col-sm-12" style="font-size = 1rem;">Estimated amount you are prepared to pay (without utilities)</p>
+      <p class="boarding-house-field col-lg-12 col-sm-12" style="font-size = 1rem;">Estimated amount you are prepared to pay per person (without utilities)</p>
       <div class="boarding-house-field col-lg-12 col-sm-12 form-group">
-        <input id="prepared2pay" required data-table="Estimated amount you are prepared to pay(without utilities)" data-error="Please fill out this field." name="estimated-payment" type="number" class="multisteps-form__input form-control">
+        <input id="prepared2pay" required data-table="Estimated amount you are prepared to pay per person (without utilities)" data-error="Please fill out this field." name="estimated-payment" type="number" class="multisteps-form__input form-control">
         <label style="font-size: 0.89rem;" for="prepared2pay">Estimated amount to pay in dollars</label>
         <div class="help-block with-errors"></div>
       </div>
