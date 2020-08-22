@@ -5,7 +5,7 @@ $('#previewBtn').click(function() {
      $("form").validator('reset');
      $('form').validator('update');
      $('form').validator('validate');
-     $("form input[type='text'], form input[type='email'], form input[type='number'], form input[type='checkbox'], form select, form textarea, form input[type='radio']:checked").each(
+     $("form input[type='text'], form input[type='email'], form input[type='number'], form input[type='checkbox']:checked, form select, form textarea, form input[type='radio']:checked").each(
         function(index){
           var input = $(this);
           if (!(input.val()==="") && !(input.val()===null) && !(input.hasClass('hidden')) ) {

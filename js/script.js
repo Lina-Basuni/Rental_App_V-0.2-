@@ -701,22 +701,22 @@ var gp_house_fields = `
     <div class="help-block with-errors"></div>
   </div>
   <div class="col-lg-6 col-sm-12   form-group gp-house-field">
-    <input id="member-1" required data-table="Group member name (1)" data-error="Please enter the group member name" name="group-member-1" type="text" class="form-control textarea-form" placeholder="1. Group Member Name">
+    <input id="member-1" data-table="Group member name (1)" data-error="Please enter the group member name" name="group-member-1" type="text" class="form-control textarea-form" placeholder="1. Group Member Name">
     <label for="member-1">Group member name (1)</label>
     <div class="help-block with-errors"></div>
   </div>
   <div class="col-lg-6 col-sm-12   form-group gp-house-field">
-    <input id="member-2" required data-table="Group member name (2)" data-error="Please enter the group member name" name="group-member-2" type="text" class="form-control textarea-form" placeholder="2. Group Member Name">
+    <input id="member-2" data-table="Group member name (2)" data-error="Please enter the group member name" name="group-member-2" type="text" class="form-control textarea-form" placeholder="2. Group Member Name">
     <label for="member-2">Group member name (2)</label>
     <div class="help-block with-errors"></div>
   </div>
   <div class="col-lg-6 col-sm-12   form-group gp-house-field">
-    <input id="member-3" required data-table="Group member name (3)" data-error="Please enter the group member name" name="group-member-3" type="text" class="form-control textarea-form" placeholder="3. Group Member Name">
+    <input id="member-3" data-table="Group member name (3)" data-error="Please enter the group member name" name="group-member-3" type="text" class="form-control textarea-form" placeholder="3. Group Member Name">
     <label for="member-3">Group member name (3)</label>
     <div class="help-block with-errors"></div>
   </div>
   <div class="col-lg-6 col-sm-12   form-group gp-house-field">
-    <input id="member-4" required data-table="Group member name (4)" data-error="Please enter the group member name" name="group-member-4" type="text" class="form-control textarea-form" placeholder="4. Group Member Name">
+    <input id="member-4" data-table="Group member name (4)" data-error="Please enter the group member name" name="group-member-4" type="text" class="form-control textarea-form" placeholder="4. Group Member Name">
     <label for="member-4">Group member name (4)</label>
     <div class="help-block with-errors"></div>
   </div>
@@ -742,10 +742,12 @@ var boarding_house_fields = `
       <select id="room-type" name="room-type" required data-table="Room Type" data-error="Please select a room type" class="multisteps-form__select form-control">
         <option value="" disabled selected ></option>
         <option value="Single">Single</option>
-        <option value="Suite Double">Suite Double</option>
         <option value="Double">Double</option>
+        <option value="Suite Single">Suite Single</option>
+        <option value="Suite Double">Suite Double</option>
         <option value="Apartment">Apartment</option>
         <option value="Basement Double">Basement Double</option>
+        <option value="Basement Triple">Basement Triple</option>
       </select>
       <label for="room-type">Room Type</label>
       <div class="help-block with-errors"></div>
@@ -801,8 +803,10 @@ var single_r = `
     <option value="202">202</option>
     <option value="203">203</option>
     <option value="205">205</option>
-    <option value="304">304</option>
+    <option value="206">206</option>
     <option value="305">305</option>
+    <option value="306">306</option>
+    <option value="307">307</option>
     <option value="308">308</option>
     <option value="309">309</option>
     <option value="310">310</option>
@@ -811,38 +815,55 @@ var single_r = `
   <div class="help-block with-errors"></div>
 </div>
 `;
-var suite_dbl_r = `
-<div class="room-content">
-  <select id="room-num" name="room-num" required data-table="Requested Room Number" data-error="Please select a room number" class="multisteps-form__select form-control">
-    <option value="" disabled selected hidden></option>
-    <option value="102">102</option>
-    <option value="201C">201C</option>
-    <option value="201A">201A</option>
-    <option value="204C">204C</option>
-  </select>
-  <label for="room-num">Requested Room Number</label>
-  <div class="help-block with-errors"></div>
-</div>
-`;
+
 var double_r = `
 <div class="room-content">
   <select id="room-num" name="room-num" required data-table="Requested Room Number" data-error="Please select a room number" class="multisteps-form__select form-control">
     <option value="" disabled selected hidden></option>
-    <option value="206">206</option>
     <option value="208">208</option>
-    <option value="307">307</option>
-    <option value="306">306</option>
-    <option value="303">303</option>
     <option value="301">301</option>
-    <option value="311">311</option>
     <option value="302">302</option>
-    <option value="201A">201A</option>
     <option value="303">303</option>
+    <option value="304">304</option>
+    <option value="311">311</option>
   </select>
   <label for="room-num">Requested Room Number</label>
   <div class="help-block with-errors"></div>
 </div>
 `;
+
+var suite_dbl_r = `
+<div class="room-content">
+  <select id="room-num" name="room-num" required data-table="Requested Room Number" data-error="Please select a room number" class="multisteps-form__select form-control">
+    <option value="" disabled selected hidden></option>
+    <option value="101R">101R</option>
+    <option value="101L">101L</option>
+    <option value="201L">201L</option>
+    <option value="204R">204R</option>
+    <option value="204L">204L</option>
+    <option value="207R">207R</option>
+    <option value="207L">207L</option>
+
+  </select>
+  <label for="room-num">Requested Room Number</label>
+  <div class="help-block with-errors"></div>
+</div>
+`;
+
+
+
+var suite_single_r = `
+<div class="room-content">
+  <select id="room-num" name="room-num" required data-table="Requested Room Number" data-error="Please select a room number" class="multisteps-form__select form-control">
+    <option value="" disabled selected hidden></option>
+    <option value="204">204</option>
+    <option value="201R">201R</option>
+  </select>
+  <label for="room-num">Requested Room Number</label>
+  <div class="help-block with-errors"></div>
+</div>
+`;
+
 var apartment = `
 <div class="room-content">
   <select id="room-num" name="room-num" required data-table="Requested Room Number" data-error="Please select a room number" class="multisteps-form__select form-control">
@@ -859,6 +880,16 @@ var basement_dbl_r = `
   <select id="room-num" name="room-num" required data-table="Requested Room Number" data-error="Please select a room number" class="multisteps-form__select form-control">
     <option value="" disabled selected hidden></option>
     <option value="Bsmnt1">Bsmnt1</option>
+  </select>
+  <label for="room-num">Requested Room Number</label>
+  <div class="help-block with-errors"></div>
+</div>
+`;
+
+var basement_triple_r = `
+<div class="room-content">
+  <select id="room-num" name="room-num" required data-table="Requested Room Number" data-error="Please select a room number" class="multisteps-form__select form-control">
+    <option value="" disabled selected hidden></option>
     <option value="Bsmnt2">Bsmnt2</option>
   </select>
   <label for="room-num">Requested Room Number</label>
@@ -908,6 +939,22 @@ function toggleHouseFields() {
           handleLabels();
           handleValLabel();
       }
+      else if ($('#room-type').val()=="Double") {
+        console.log("Double");
+        $(".room-content").detach();
+        $(".room-num-div").append(double_r);
+        $("form").validator('update');
+        handleLabels();
+        handleValLabel();
+      }
+      else if ($('#room-type').val()=="Suite Single") {
+          console.log("Suite Single");
+          $(".room-content").detach();
+          $(".room-num-div").append(suite_single_r);
+          $("form").validator('update');
+          handleLabels();
+          handleValLabel();
+      }
       else if ($('#room-type').val()=="Suite Double") {
           console.log("Suite Double");
           $(".room-content").detach();
@@ -916,18 +963,18 @@ function toggleHouseFields() {
           handleLabels();
           handleValLabel();
       }
-      else if ($('#room-type').val()=="Double") {
-          console.log("Double");
-          $(".room-content").detach();
-          $(".room-num-div").append(double_r);
-          $("form").validator('update');
-          handleLabels();
-          handleValLabel();
-      }
       else if ($('#room-type').val()=="Apartment") {
           console.log("Apartment");
           $(".room-content").detach();
           $(".room-num-div").append(apartment);
+          $("form").validator('update');
+          handleLabels();
+          handleValLabel();
+      }
+      else if ($('#room-type').val()=="Basement Triple") {
+          console.log("Apartment");
+          $(".room-content").detach();
+          $(".room-num-div").append(basement_triple_r);
           $("form").validator('update');
           handleLabels();
           handleValLabel();
@@ -977,6 +1024,8 @@ $('#yesEmployCheck').click(function() {
     requireEmployment();
 });
 
+
+
 $('input[name=currentRole]').change(function(){
     if($(this).is(':checked')) {
         // Checkbox is checked..
@@ -999,4 +1048,46 @@ $('input[name=currentRole]').change(function(){
 
 
     }
+});
+
+
+function unrequireRental() {
+  $("#step-3").find("input, select.state, textarea").each(function(){
+    var elm = $(this);
+    elm.attr('required', false);
+  })
+  $('#step-3').validator('reset');
+}
+
+function requireRental() {
+  $("#step-3").find("input, select.state, textarea").each(function(){
+    var elm = $(this);
+    elm.attr('required', true);
+  })
+}
+
+$('#noRentalCheck').click(function() {
+  console.log("Yes");
+  $("form").validator('update');
+  unrequireRental();
+});
+
+$('#yesRentalCheck').click(function() {
+  console.log("No");
+  $("form").validator('update');
+  requireRental();
+});
+
+$("#payment-schedule").change(function(){
+
+  if(($('#payment-schedule').val()=="Monthly") || ($('#payment-schedule').val()=="Bimonthly")){
+    $('#pref-payment').show();
+    handleLabels();
+    handleValLabel();
+  }
+  else {
+    $('#pref-payment').hide();
+
+  }
+
 });

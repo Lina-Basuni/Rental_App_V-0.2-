@@ -596,3 +596,7 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   border: none;
 
 }
+
+.help-block{
+  font-size: 12px !important;
+}

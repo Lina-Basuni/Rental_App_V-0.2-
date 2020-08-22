@@ -37,7 +37,7 @@ document.querySelectorAll("input[type='email']").forEach((mailField,i) => {
 
 $("#applicant-email").change(function() {
   if ($("#applicant-email").val()!=""){
-    var restURL= "http://apilayer.net/api/check?access_key=0d5e011f19cf0968cec5587518aecc58&email="+$("#applicant-email").val()+"&smtp=1&format=1";
+    var restURL= "http://apilayer.net/api/check?access_key=c5b049bcf0b0decf671f3493487f5e12&email="+$("#applicant-email").val()+"&smtp=1&format=1";
     $.ajax({
       type : 'GET',
       url :restURL,
@@ -83,7 +83,7 @@ $("#parent-1-email").change(function() {
 
   if ($("#parent-1-email").val()!="") {
 
-    var restURL= "http://apilayer.net/api/check?access_key=0d5e011f19cf0968cec5587518aecc58&email="+$("#parent-1-email").val()+"&smtp=1&format=1";
+    var restURL= "http://apilayer.net/api/check?access_key=c5b049bcf0b0decf671f3493487f5e12&email="+$("#parent-1-email").val()+"&smtp=1&format=1";
     $.ajax({
       type : 'GET',
       url :restURL,
@@ -120,7 +120,7 @@ function renderList2(data) {
 
 $("#parent-2-email").change(function() {
   if ($("#parent-2-email").val()!=""){
-    var restURL= "http://apilayer.net/api/check?access_key=0d5e011f19cf0968cec5587518aecc58&email="+$("#parent-2-email").val()+"&smtp=1&format=1";
+    var restURL= "http://apilayer.net/api/check?access_key=c5b049bcf0b0decf671f3493487f5e12&email="+$("#parent-2-email").val()+"&smtp=1&format=1";
     $.ajax({
       type : 'GET',
       url :restURL,
@@ -157,7 +157,7 @@ function renderList3(data) {
 
 $("#landlord-email").change(function() {
   if ($("#landlord-email").val()!=""){
-    var restURL= "http://apilayer.net/api/check?access_key=0d5e011f19cf0968cec5587518aecc58&email="+$("#landlord-email").val()+"&smtp=1&format=1";
+    var restURL= "http://apilayer.net/api/check?access_key=c5b049bcf0b0decf671f3493487f5e12&email="+$("#landlord-email").val()+"&smtp=1&format=1";
     $.ajax({
       type : 'GET',
       url :restURL,
@@ -194,7 +194,7 @@ function renderList4(data) {
 
 $("#employer-email").change(function() {
   if ($("#employer-email").val()!=""){
-    var restURL= "http://apilayer.net/api/check?access_key=0d5e011f19cf0968cec5587518aecc58&email="+$("#employer-email").val()+"&smtp=1&format=1";
+    var restURL= "http://apilayer.net/api/check?access_key=c5b049bcf0b0decf671f3493487f5e12&email="+$("#employer-email").val()+"&smtp=1&format=1";
     $.ajax({
       type : 'GET',
       url :restURL,

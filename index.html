@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
   <title>Rental Application</title>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
@@ -244,13 +246,13 @@
 
                     </div>
                     <div id="car_fields" class="col-lg-12 col-sm-12 form-group">
-                      <select id="car-select" placeholder="Do you own a Car?" required data-table="Do you own a Car?" data-error="Please select an answer" name="own-a-car?" type="text" class="multisteps-form__input form-control">
+                      <select id="car-select" required data-table="Are you bringing a Car?" data-error="Please select an answer" name="own-a-car?" type="text" class="multisteps-form__input form-control">
                         <option selected disabled hidden value=""></option>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
-                        <option value="planning">Planning to own a car</option>
+                        <!-- <option value="planning">Planning to own a car</option> -->
                       </select>
-                      <label for="car-select">Do you own a car?</label>
+                      <label for="car-select">Are you bringing a Car?</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div id="ifYesCar" class="form-row" style="display:none;">
@@ -267,8 +269,8 @@
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input id="school-year" required data-table="Year" data-error="Please fill out this field." name="applicant-school-year" type="text" class="multisteps-form__input form-control" placeholder="Year">
-                      <label for="school-year">Year</label>
+                      <input id="school-year" required data-table="Graduation Year" data-error="Please fill out this field." name="applicant-school-year" type="text" class="multisteps-form__input form-control" placeholder="Year">
+                      <label for="school-year">Graduation Year</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12   form-group">
@@ -355,7 +357,9 @@
                         <option value="Bimonthly">Bimonthly</option>
                       </select>
                       <label for="payment-schedule">Preferred payment schedule</label>
-                      <div class="help-block with-errors"></div>
+                      <div id="pref-payment" class="help-block with-errors" style="font-size: 12px; margin-left: 0.5rem; color:#999; display:none;">We would recommend choosing another payment schedule to make collecting the rent from members easier on you.</div>
+                      <!-- <div class="help-block">Minimum of 6 characters</div> -->
+
                     </div>
                     <div class="col-lg-12 col-sm-12 form-group">
                       <select id="who-pays" required name="who-pay-rent" placeholder="Who is paying the rent?" data-table="Who is paying the rent?" data-error="Please select an answer" type="text" class="multisteps-form__input form-control">
@@ -666,6 +670,20 @@
                         <h4 class="multisteps-form__title">Rental History</h4>
                         <div class="form-row mt-4">
                           <p class="col-lg-12 col-sm-12 sub-text">Your rental history is used to determine your eligibility for renting with us. A good rental history increases your chances of approval. </p>
+                        </div>
+                        <div class="form-row mt-4">
+                          <div class="col">
+                            <p class="radio-button-txt">Do you have any Rental history?</p>
+                            <div class="radio-btn-row form-group">
+                              <label class="radio-inline">
+                                <input id="yesRentalCheck" data-table="Do you have any Rental history?" placeholder="Do you have any Rental history?" value="Yes" required data-error="Please choose an answer." type="radio" name="have-rental-history">Yes
+                              </label>
+                              <label class="radio-inline">
+                                <input id="noRentalCheck" data-table="Do you have any Rental history?" placeholder="Do you have any Rental history?" value="No" type="radio" name="have-rental-history">No
+                              </label>
+                              <div class="help-block with-errors"></div>
+                            </div>
+                          </div>
                         </div>
                         <div class="form-row mt-4">
                           <div class="col">
@@ -1014,7 +1032,7 @@
                             <div class="form-row mt-4 date-from-to-row">
                               <div class="form-holder w-100 ml-2 form-group">
                                 <!-- <p>I agree</p> -->
-                                <input data-table="undefined"  placeholder="I currently work in this role"  type="checkbox" id="currentRole" name="currentRole" value="Yes" style="color: black;">
+                                <input  placeholder="I currently work in this role"  type="checkbox" id="currentRole" name="currentRole" value="Yes" style="color: black;">
                                 <label class="terms" for="currentRole">I currently work in this role</label>
                                 <div class="help-block with-errors"></div>
                               </div>
